@@ -1,0 +1,32 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.intro {
+  @include gradient;
+  padding: 3.5rem 0 0 0;
+
+  .video-box {
+    a {
+      color: $secondary;
+      font-size: 6rem;
+    }
+  }
+
+  .border-animation {
+    border: 0.55rem solid white;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    animation: border 1.5s linear infinite;
+
+    &--border-1 {
+      animation-delay: 1s;
+    }
+    &--border-2 {
+      animation-delay: 1.5s;
+    }
+  }
+}

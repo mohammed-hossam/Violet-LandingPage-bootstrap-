@@ -1,0 +1,28 @@
+@use '../components/mixins' as *;
+@use '../custom' as *;
+
+.getStarted {
+  padding: 2rem 0;
+  background-color: $gray-200;
+  .cta-info {
+    //     @include border;
+    @include gradient;
+    padding: 5rem 3rem;
+    &__list {
+      list-style: none;
+      padding: 0.5rem 0 0 0.5rem;
+      li::before {
+        content: '\f00c';
+        font-family: 'font Awesome 5 free';
+        margin-right: 0.5rem;
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .cta-form {
+    //     @include border;
+    padding: 3rem;
+  }
+}
